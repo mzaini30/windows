@@ -1,0 +1,41 @@
+---
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pembuat Favorable - mzaini30.com</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		td {
+			vertical-align: top;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>
+				<p>Data</p>
+				<textarea name="" id="" cols="30" rows="5" class="data masuk"></textarea>
+				<p>Jumlah Pilihan Jawaban</p>
+				<p><input type="text" class="pilihan-jawaban masuk"></p>
+			</td>
+			<td>
+				<p>Hasil</p>
+				<textarea name="" id="" cols="30" rows="5" class="hasil"></textarea>
+			</td>
+		</tr>
+	</table>
+	<script type="text/javascript">
+		{% include jquery.min.js %}
+		$('.masuk').on('keyup', function(){
+			pengurang = Number($('.pilihan-jawaban').val()) + 1
+			hasil = $('.data').val().replace(/(\d)/g, function(x){
+				return pengurang - Number(x)
+			})
+			$('.hasil').val(hasil)
+		})
+	</script>
+</body>
+</html>

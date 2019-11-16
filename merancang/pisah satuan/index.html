@@ -1,0 +1,22 @@
+---
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pisah Satuan</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<p>Input</p>
+	<p><input type="text" class="input"></p>
+	<p>Output</p>
+	<p><input type="text" class="output"></p>
+	<script type="text/javascript">
+		{% include jquery.min.js %}
+		$('.input').on('keyup', function(){
+			$('.output').val($(this).val().replace(/(.)/g, '$1\t'))
+		})
+	</script>
+</body>
+</html>
