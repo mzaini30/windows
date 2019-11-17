@@ -2,11 +2,11 @@ $('.form-control:not(.hasil)').on('keyup', function(){
 
 	// deklarasi
 
-	var favorable = $('.favorable').val();
-	var unfavorable = $('.unfavorable').val();
-	var opsi = $('.opsi').val();
-	var data = $('.data').val();
-	var hasil = $('.hasil');
+	var favorable = $('#favorable').val();
+	var unfavorable = $('#unfavorable').val();
+	var opsi = $('#opsi').val();
+	var data = $('#data').val();
+	var hasil = $('#hasil');
 
 	// mulai
 
@@ -45,49 +45,49 @@ $('.form-control:not(.hasil)').on('keyup', function(){
 			if (opsi.length == 4){
 				if (blueprint[n] == 'fav'){
 					if (data[a][n] == opsi[0]){
-						skoring.push('Sangat Tidak Setuju');
+						skoring.push('4');
 					} else if (data[a][n] == opsi[1]){
-						skoring.push('Tidak Setuju');
+						skoring.push('3');
 					} else if (data[a][n] == opsi[2]){
-						skoring.push('Setuju');
+						skoring.push('2');
 					} else if (data[a][n] == opsi[3]){
-						skoring.push('Sangat Setuju');
+						skoring.push('1');
 					}
 				} else if (blueprint[n] == 'unfav'){
 					if (data[a][n] == opsi[0]){
-						skoring.push('Sangat Setuju');
+						skoring.push('1');
 					} else if (data[a][n] == opsi[1]){
-						skoring.push('Setuju');
+						skoring.push('2');
 					} else if (data[a][n] == opsi[2]){
-						skoring.push('Tidak Setuju');
+						skoring.push('3');
 					} else if (data[a][n] == opsi[3]){
-						skoring.push('Sangat Tidak Setuju');
+						skoring.push('4');
 					}
 				}
 			} else if (opsi.length == 5){
 				if (blueprint[n] == 'fav'){
 					if (data[a][n] == opsi[0]){
-						skoring.push('Sangat Tidak Setuju');
+						skoring.push('5');
 					} else if (data[a][n] == opsi[1]){
-						skoring.push('Tidak Setuju');
+						skoring.push('4');
 					} else if (data[a][n] == opsi[2]){
-						skoring.push('Netral');
+						skoring.push('3');
 					} else if (data[a][n] == opsi[3]){
-						skoring.push('Setuju');
+						skoring.push('2');
 					} else if (data[a][n] == opsi[4]){
-						skoring.push('Sangat Setuju');
+						skoring.push('1');
 					}
 				} else if (blueprint[n] == 'unfav'){
 					if (data[a][n] == opsi[0]){
-						skoring.push('Sangat Setuju');
+						skoring.push('1');
 					} else if (data[a][n] == opsi[1]){
-						skoring.push('Setuju');
+						skoring.push('2');
 					} else if (data[a][n] == opsi[2]){
-						skoring.push('Netral');
+						skoring.push('3');
 					} else if (data[a][n] == opsi[3]){
-						skoring.push('Tidak Setuju');
+						skoring.push('4');
 					} else if (data[a][n] == opsi[4]){
-						skoring.push('Sangat Tidak Setuju');
+						skoring.push('5');
 					}
 				}
 			}
