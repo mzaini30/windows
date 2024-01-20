@@ -43,7 +43,8 @@ func openbrowser(url string) {
 }
 
 func main() {
-	lokasi := "./dist"
+	// lokasi := "./dist"
+	lokasi := "./"
 
 	// _, err_path := os.Stat("./web/path.txt")
 	// if err_path == nil {
