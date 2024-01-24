@@ -19,6 +19,7 @@
     "vite": "^5.0.8"
   },
   "dependencies": {
+    "md5": "^2.3.0",
     "svelte-spa-router": "^4.0.1"
   }
 }
